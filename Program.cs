@@ -26,12 +26,31 @@ else
 //645 -> 5
 //78 -> третьей цифры нет
 //32679 -> 6
-/*
+
 Console.Write("Input your number: ");
 int user_number = Convert.ToInt32(Console.ReadLine());
 int result;
 
-*/
+int ThirdDigit (int number)
+{
+    while (user_number > 1000)
+    {
+        user_number = user_number / 10;
+    }
+    int thirdNum = user_number % 10;
+    return thirdNum;
+}
+
+if (user_number > 99)
+{
+    result = ThirdDigit(user_number);
+    Console.WriteLine($"The third digit is {result}");
+}
+else
+    Console.WriteLine("There is no third digit");
+
+
+
 
 //Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую 
 //день недели, и проверяет, является ли этот день выходным.
